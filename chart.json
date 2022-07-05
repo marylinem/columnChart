@@ -18,10 +18,6 @@
 		}
 	],
 	"properties": {
-		"color": {
-			"type": "string",
-			"description": "Text Color info"
-		},
 		"width": {
 			"type": "integer",
 			"default": 600
@@ -32,22 +28,7 @@
 		}
 	},
 	"methods": {
-		"setColor": {
-			"description": "Sets the background color.",
-			"parameters": [
-				{
-					"name": "newColor",
-					"type": "string",
-					"description": "The new background color"
-				}
-			],
-			"body": "this.color = newColor;"
-		},
-		"getColor": {
-			"returnType": "string",
-			"description": "Returns the background color.",
-			"body": "return this.color;"
-		}
+		
 	},
 	"events": {
 		"onClick": {
