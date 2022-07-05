@@ -47,7 +47,7 @@
 		
 			}
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
-			chart();
+			chart(shadowRoot);
 		}
 	}
 	customElements.define("com-demo-chart", Chart);
