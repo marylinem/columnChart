@@ -33,21 +33,21 @@
 		}
 	},
 	"methods": {
-		"setValue": {
-			"description": "Sets the chart value.",
+		"setColor": {
+			"description": "Sets the background color.",
 			"parameters": [
 				{
 					"name": "newColor",
 					"type": "string",
-					"description": "Text Color info"
+					"description": "The new background color"
 				}
 			],
 			"body": "this.color = newColor;"
 		},
-		"getValue": {
-			"returnType": "number",
-			"description": "Returns the chart value.",
-			"body": "return this.value;"
+		"getColor": {
+			"returnType": "string",
+			"description": "Returns the background color.",
+			"body": "return this.color;"
 		}
 	},
 	"events": {
