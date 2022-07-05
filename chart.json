@@ -18,10 +18,10 @@
 		}
 	],
 	"properties": {
-		"value": {
-			"type": "number",
-			"description": "chart value",
-			"default": 100
+		"color": {
+			"type": "string",
+			"description": "Text Color info",
+			"default": "#3498db"
 		},
 		"width": {
 			"type": "integer",
@@ -37,22 +37,12 @@
 			"description": "Sets the chart value.",
 			"parameters": [
 				{
-					"name": "newValue",
-					"type": "number",
-					"description": "chart value"
-				},
-				{
-					"name": "newInfo",
-					"type": "string",
-					"description": "chart info"
-				},
-				{
 					"name": "newColor",
 					"type": "string",
 					"description": "Text Color info"
 				}
 			],
-			"body": "this.value = newValue; this.info = newInfo; this.color = newColor;"
+			"body": "this.color = newColor;"
 		},
 		"getValue": {
 			"returnType": "number",
@@ -62,8 +52,8 @@
 	},
 	"events": {
 		"onClick": {
-			"description": "Called when the user clicks the Colored Box."
-		}		
+			"description": "Called when the user clicks the Box."
+		}
 	}
 }
 

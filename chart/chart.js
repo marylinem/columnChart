@@ -156,7 +156,9 @@
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
-			
+			if ("color" in changedProperties) {
+				this.style["background-color"] = changedProperties["color"];
+			}			
 		}
 	}
 	
