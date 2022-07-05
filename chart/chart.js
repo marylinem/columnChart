@@ -166,7 +166,7 @@
 	}
 	var script = document.createElement("script"); 
 	script.type = "text/javascript"; 
-	script.src = "https://cdn.amcharts.com/lib/5/index.js"; 
+	script.src = "https://cdn.amcharts.com/lib/5/xy.js"; 
 	script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
 	document.head.appendChild(script);	
 })();
