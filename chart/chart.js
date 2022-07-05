@@ -166,7 +166,7 @@
 		}
 	}
 
-	for(let fileName of ["index.js","xy.js","Animated.js"]){
+	for(let fileName of ["index.js","xy.js","themes/Animated.js"]){
 		var script = document.createElement("script"); 
 		script.type = "text/javascript"; 
 		script.src = "https://cdn.amcharts.com/lib/5/"+fileName; 
