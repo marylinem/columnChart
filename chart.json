@@ -21,15 +21,15 @@
 		"color": {
 			"type": "string",
 			"description": "Text Color info",
-			"default": ""
+			"default": "#1E90FF"
 		},
 		"width": {
 			"type": "integer",
-			"default": 1000
+			"default": 600
 		},
 		"height": {
 			"type": "integer",
-			"default": 1000
+			"default": 600
 		}
 	},
 	"methods": {
