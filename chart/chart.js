@@ -5,7 +5,7 @@
 		:host #chartdiv {
 			width: 100%;
 			height: 500px;
-			border-color: black;
+			border-color: red;
 			border-style: solid;
 			display: block;
 			}
