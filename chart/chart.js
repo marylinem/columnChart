@@ -1,4 +1,4 @@
-(function() { 
+(async function() { 
 	let template = document.createElement("template");
 	template.innerHTML = `
 		<style>		
@@ -167,12 +167,25 @@
 	}
 
 	for(let fileName of ["index.js","xy.js","themes/Animated.js"]){
-		var script = document.createElement("script"); 
-		script.type = "text/javascript"; 
-		script.src = "https://cdn.amcharts.com/lib/5/"+fileName; 
+		await load(fileName)
 		//script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
-		document.head.appendChild(script);	
-		console.log(script);
+
+	}
+	customElements.define("com-demo-chart", Chart);
+
+	function load(fileName){
+	return new Promise(
+		function(resolve,reject){
+			var script = document.createElement("script"); 
+			script.type = "text/javascript"; 
+			script.src = "https://cdn.amcharts.com/lib/5/"+fileName; 
+			script.onload =  resolve; 
+			script.onerror = reject
+			document.head.appendChild(script);	
+			console.log(script);
+		}
+	)
+	
 	}
 	
 })();
