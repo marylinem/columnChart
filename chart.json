@@ -1,9 +1,9 @@
 {
-	"id": "com.demo.gauge",
+	"id": "com.demo.chart",
 	"version": "1.0.0",
-	"name": "Demo Gauge",
-	"description": "A gauge demo",
-	"newInstancePrefix": "Gauge",
+	"name": "Demo chart",
+	"description": "A chart demo",
+	"newInstancePrefix": "chart",
 	"icon": "https://marylinem.github.io/columnChart/chart/icon.png",
 	"vendor": "Demo",
 	"eula": "EULA",
@@ -34,12 +34,12 @@
 	"properties": {
 		"value": {
 			"type": "number",
-			"description": "Gauge value",
+			"description": "chart value",
 			"default": 0
 		},
 		"info": {
 			"type": "string",
-			"description": "Gauge info",
+			"description": "chart info",
 			"default": ""
 		},
 		"color": {
@@ -58,17 +58,17 @@
 	},
 	"methods": {
 		"setValue": {
-			"description": "Sets the Gauge value.",
+			"description": "Sets the chart value.",
 			"parameters": [
 				{
 					"name": "newValue",
 					"type": "number",
-					"description": "Gauge value"
+					"description": "chart value"
 				},
 				{
 					"name": "newInfo",
 					"type": "string",
-					"description": "Gauge info"
+					"description": "chart info"
 				},
 				{
 					"name": "newColor",
@@ -80,7 +80,7 @@
 		},
 		"getValue": {
 			"returnType": "number",
-			"description": "Returns the Gauge value.",
+			"description": "Returns the chart value.",
 			"body": "return this.value;"
 		}
 	},
