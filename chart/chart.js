@@ -26,7 +26,7 @@
 				this.dispatchEvent(event);
 			});				
 			this._props = {};
-			this.init()
+			this.init(shadowRoot)
 		}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
@@ -40,13 +40,13 @@
 		}
 
 
-		async init(){
+		async init(shadowRoot){
 			for(let fileName of ["index.js","xy.js","themes/Animated.js"]){
 				await load(fileName)
 				//script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
 		
 			}
-			console.log(document);
+			console.log(document,shadowRoot.querySelector("#chartdiv"))
 			chart();
 		}
 	}
@@ -69,12 +69,12 @@
 	
 	}
 
-	function chart(){
+	function chart(shadowRoot){
 		console.log("code funktioniert");
 		am5.ready(function() {
 
 		// Create root element
-		var root = am5.Root.new("chartdiv");
+		var root = am5.Root.new(shadowRoot.querySelector("#chartdiv"));
 
 		// Set themes
 		root.setThemes([
