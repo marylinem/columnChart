@@ -1,4 +1,4 @@
-(async function() { 
+(function() { 
 	let template = document.createElement("template");
 	template.innerHTML = `
 		<style>		
@@ -26,6 +26,7 @@
 				this.dispatchEvent(event);
 			});				
 			this._props = {};
+			this.init()
 		}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
@@ -37,16 +38,20 @@
 				this.style["background-color"] = changedProperties["color"];
 			}			
 		}
-	}
 
-	for(let fileName of ["index.js","xy.js","themes/Animated.js"]){
-		await load(fileName)
-		//script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
 
+		async init(){
+			for(let fileName of ["index.js","xy.js","themes/Animated.js"]){
+				await load(fileName)
+				//script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
+		
+			}
+			console.log(document);
+			chart();
+		}
 	}
 	customElements.define("com-demo-chart", Chart);
-	console.log(document);
-	chart();
+	
 
 
 	function load(fileName){
