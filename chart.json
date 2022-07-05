@@ -21,7 +21,7 @@
 		"color": {
 			"type": "string",
 			"description": "Text Color info",
-			"default": "#3498db"
+			"default": ""
 		},
 		"width": {
 			"type": "integer",
