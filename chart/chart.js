@@ -11,13 +11,58 @@
 			}
 		</style>
 
-		<!-- Resources -->
-		<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+		<div id="chartdiv"></div>
 
-		<!-- Chart code -->
-		<script>
+	`;
+
+	class Chart extends HTMLElement {
+		constructor() {
+			super(); 
+			let shadowRoot = this.attachShadow({mode: "open"});
+			shadowRoot.appendChild(template.content.cloneNode(true));
+			this.addEventListener("click", event => {
+				alert("Styling funktioniert");
+				var event = new Event("onClick");
+				this.dispatchEvent(event);
+			});				
+			this._props = {};
+		}
+
+		onCustomWidgetBeforeUpdate(changedProperties) {
+			this._props = { ...this._props, ...changedProperties };
+		}
+
+		onCustomWidgetAfterUpdate(changedProperties) {
+			if ("color" in changedProperties) {
+				this.style["background-color"] = changedProperties["color"];
+			}			
+		}
+	}
+
+	for(let fileName of ["index.js","xy.js","themes/Animated.js"]){
+		await load(fileName)
+		//script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
+
+	}
+	customElements.define("com-demo-chart", Chart);
+	chart();
+	
+	function load(fileName){
+	return new Promise(
+		function(resolve,reject){
+			var script = document.createElement("script"); 
+			script.type = "text/javascript"; 
+			script.src = "https://cdn.amcharts.com/lib/5/"+fileName; 
+			script.onload =  resolve; 
+			script.onerror = reject
+			document.head.appendChild(script);	
+			console.log(script);
+		}
+	)
+	
+	}
+
+	function chart(){
 		console.log("code funktioniert");
 		am5.ready(function() {
 
@@ -136,56 +181,6 @@
 		chart.appear(1000, 100);
 
 		}); // end am5.ready()
-		</script>
-
-		<div id="chartdiv"></div>
-
-	`;
-
-	class Chart extends HTMLElement {
-		constructor() {
-			super(); 
-			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));
-			this.addEventListener("click", event => {
-				alert("Styling funktioniert");
-				var event = new Event("onClick");
-				this.dispatchEvent(event);
-			});				
-			this._props = {};
-		}
-
-		onCustomWidgetBeforeUpdate(changedProperties) {
-			this._props = { ...this._props, ...changedProperties };
-		}
-
-		onCustomWidgetAfterUpdate(changedProperties) {
-			if ("color" in changedProperties) {
-				this.style["background-color"] = changedProperties["color"];
-			}			
-		}
-	}
-
-	for(let fileName of ["index.js","xy.js","themes/Animated.js"]){
-		await load(fileName)
-		//script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
-
-	}
-	customElements.define("com-demo-chart", Chart);
-
-	function load(fileName){
-	return new Promise(
-		function(resolve,reject){
-			var script = document.createElement("script"); 
-			script.type = "text/javascript"; 
-			script.src = "https://cdn.amcharts.com/lib/5/"+fileName; 
-			script.onload =  resolve; 
-			script.onerror = reject
-			document.head.appendChild(script);	
-			console.log(script);
-		}
-	)
-	
 	}
 	
 })();
