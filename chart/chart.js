@@ -154,17 +154,6 @@
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
-			if ("value" in changedProperties) {
-				this.$value = changedProperties["value"];
-			}
-			
-			if ("info" in changedProperties) {
-				this.$info = changedProperties["info"];
-			}
-			
-			if ("color" in changedProperties) {
-				this.$color = changedProperties["color"];
-			}
 			
 		}
 	}
