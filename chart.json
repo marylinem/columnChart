@@ -25,16 +25,7 @@
 	},
 	"events": {
 		
-	},
-	"series": [{
-		"series": [{
-			"type": "PieSeries",
-			"dataFields": {
-			  "value": "litres",
-			  "category": "country"
-			}
-		  }]
-	}]
+	}
 	  
 }
 
