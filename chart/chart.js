@@ -172,6 +172,7 @@
 		script.src = "https://cdn.amcharts.com/lib/5/"+fileName; 
 		script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
 		document.head.appendChild(script);	
+		console.log(script);
 	}
 	
 })();
