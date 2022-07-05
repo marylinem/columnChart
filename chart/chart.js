@@ -16,6 +16,8 @@
 
 		<!-- Chart code -->
 		<script>
+		console.log("script",this);
+		
 		am5.ready(function() {
 
 		// Create root element
