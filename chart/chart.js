@@ -45,7 +45,8 @@
 
 	}
 	customElements.define("com-demo-chart", Chart);
-	document.onload = chart;
+	chart();
+	console.log(document);
 
 	function load(fileName){
 	return new Promise(
