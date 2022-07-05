@@ -21,7 +21,7 @@
 		</style>
 	`;
 
-	class BoxBps extends HTMLElement {
+	class ChartBps extends HTMLElement {
 		constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -49,5 +49,5 @@
 		}
 	}
 
-	customElements.define("com-demo-box-bps", BoxBps);
+	customElements.define("com-demo-chart-bps", ChartBps);
 })();

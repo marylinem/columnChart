@@ -11,21 +11,21 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-demo-gauge",
+			"tag": "com-demo-chart",
 			"url": "https://marylinem.github.io/columnChart/chart/chart.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "styling",
-			"tag": "com-demo-gauge-sps",
+			"tag": "com-demo-chart-sps",
 			"url": "https://marylinem.github.io/columnChart/chart/chart_sps.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "builder",
-			"tag": "com-demo-box-bps",
+			"tag": "com-demo-chart-bps",
 			"url": "https://marylinem.github.io/columnChart/chart/chart_bps.js",
 			"integrity": "",
 			"ignoreIntegrity": true

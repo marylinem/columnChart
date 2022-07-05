@@ -15,7 +15,7 @@
 		</form>
 	`;
 
-	class BoxSps extends HTMLElement {
+	class ChartSps extends HTMLElement {
 		constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -43,5 +43,5 @@
 		}
 	}
 
-customElements.define("com-demo-box-sps", BoxSps);
+customElements.define("com-demo-chart-sps", ChartSps);
 })();
