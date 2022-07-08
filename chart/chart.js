@@ -71,7 +71,7 @@
 
 	function chart(shadowRoot){
 		console.log("code funktioniert");
-		this.myDataBinding.data.forEach(row => {
+		this.myDataBinding.feeds.forEach(row => {
 			console.log(row);
 		})
 		am5.ready(function() {
