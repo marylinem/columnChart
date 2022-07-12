@@ -10,20 +10,12 @@
 	"license": "1.0",
 	"webcomponents": [
 		{
-			"kind": "main",
+			"kind": "builder",
 			"tag": "com-demo-chart",
 			"url": "https://marylinem.github.io/columnChart/chart/chart.js",
 			"integrity": "",
 			"ignoreIntegrity": true
-		},
-		{
-			"kind": "builder",
-			"tag": "com-demo-chartBuilderPanel",
-			"url": "https://marylinem.github.io/columnChart/chart/chart_builder.js",
-			"integrity": "",
-			"ignoreIntegrity": true
-		}
-			
+		}	
 	],
 	"properties": {
 		"opacity": {
