@@ -19,12 +19,7 @@
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));
-			this.addEventListener("click", event => {
-				alert("Styling funktioniert");
-				var event = new Event("onClick");
-				this.dispatchEvent(event);
-			});				
+			shadowRoot.appendChild(template.content.cloneNode(true));			
 			this._props = {};
 			this.init(shadowRoot)
 		}
