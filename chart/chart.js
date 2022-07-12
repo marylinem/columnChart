@@ -67,7 +67,7 @@
 	}
 
 	function bindData(){
-		this.myDataBinding.data.array.forEach(row => {
+		this.myDataBinding.data.forEach(row => {
 			console.log(row);
 		});
 	}
