@@ -67,14 +67,10 @@
 	}
 
 	function traverse(o) {
-		for (var i in o) {
-			if (!!o[i] && typeof(o[i])=="object") {
-				console.log(i, o[i]);
-				traverse(o[i]);
-			} else {
-				console.log(i, o[i]);
-			}
-		}
+		o.data.forEach(row => {
+			// Parse row
+			console.log(row);
+		})
 		
 	}
 
