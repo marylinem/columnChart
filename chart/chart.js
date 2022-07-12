@@ -43,7 +43,6 @@
 			}
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
 			chart(shadowRoot);
-			traverse(this.myDataBinding);
 
 		}
 	}
@@ -66,16 +65,14 @@
 	
 	}
 
-	function traverse(o) {
-		o.data.forEach(row => {
+
+	function chart(shadowRoot){
+		console.log("code funktioniert");
+		this.myDataBinding.data.forEach(row => {
 			// Parse row
 			console.log(row);
 		})
 		
-	}
-
-	function chart(shadowRoot){
-		console.log("code funktioniert");
 		am5.ready(function() {
 
 		// Create root element
