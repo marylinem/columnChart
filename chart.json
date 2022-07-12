@@ -15,7 +15,15 @@
 			"url": "https://marylinem.github.io/columnChart/chart/chart.js",
 			"integrity": "",
 			"ignoreIntegrity": true
+		},
+		{
+			"kind": "builder",
+			"tag": "com-sap-sample-coloredbox-builder",
+			"url": "https://marylinem.github.io/columnChart/chart/chart_builder.js",
+			"integrity": "",
+			"ignoreIntegrity": true
 		}
+			
 	],
 	"properties": {
 
@@ -28,6 +36,18 @@
 	},
 	"dataBindings": {
 		"myDataBinding": {
+			"feeds": [
+				{
+					"id": "dimensions",
+					"description": "Dimensions",
+					"type": "dimension"
+				},
+				{
+					"id": "measures",
+					"description": "Measures",
+					"type": "mainStructureMember"
+				}
+			],			
 			"data": [
 			{
 				"dimensions_0": { "id": "[Product_3e315003an].[Product_Catego_3o3x5e06y2].&[PC4]", "label": "Alcohol" },
@@ -46,6 +66,7 @@
 				},
 				"mainStructureMembers": {"measures_0": { "id": "[Account_BestRunJ_sold].[parentId].&[Discount]", "label": "Discount" }}
 			}
+		
 		}
 	}
 }

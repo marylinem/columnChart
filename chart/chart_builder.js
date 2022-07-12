@@ -1,4 +1,4 @@
-(function() { 
+   (function() { 
 	let template = document.createElement("template");
 	template.innerHTML = `
 		<style>		
@@ -15,23 +15,13 @@
 
 	`;
 
-	class Chart extends HTMLElement {
+	class ChartBuilderPanel extends HTMLElement {
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));			
+			shadowRoot.appendChild(template.content.cloneNode(true));	
 			this._props = {};
 			this.init(shadowRoot)
-		}
-
-		onCustomWidgetBeforeUpdate(changedProperties) {
-			this._props = { ...this._props, ...changedProperties };
-		}
-
-		onCustomWidgetAfterUpdate(changedProperties) {
-			if ("color" in changedProperties) {
-				this.style["background-color"] = changedProperties["color"];
-			}			
 		}
 
 
@@ -46,7 +36,8 @@
 
 		}
 	}
-	customElements.define("com-demo-chart", Chart);
+	customElements.define("com-demo-ChartBuilderPanel", ChartBuilderPanel);
+
 	
 
 
