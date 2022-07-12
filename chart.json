@@ -26,7 +26,11 @@
 			
 	],
 	"properties": {
-
+		"opacity": {
+			"type": "number",
+			"description": "Opacity",
+			"default": 1
+		}
 	},
 	"methods": {
 		
