@@ -43,7 +43,7 @@
 			}
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
 			chart(shadowRoot);
-			bindData();
+			traverse(this.myDataBinding);
 
 		}
 	}
@@ -66,10 +66,16 @@
 	
 	}
 
-	function bindData(){
-		this.myDataBinding.data.forEach(row => {
-			console.log(row);
-		});
+	function traverse(o) {
+		for (var i in o) {
+			if (!!o[i] && typeof(o[i])=="object") {
+				console.log(i, o[i]);
+				traverse(o[i]);
+			} else {
+				console.log(i, o[i]);
+			}
+		}
+		
 	}
 
 	function chart(shadowRoot){
