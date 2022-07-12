@@ -42,6 +42,8 @@
 		
 			}
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
+			const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
+			await dataBinding.addDimensionToFeed("dimensions", dimensionId)
 			chart(shadowRoot);
 
 		}

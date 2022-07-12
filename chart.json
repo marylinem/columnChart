@@ -10,7 +10,7 @@
 	"license": "1.0",
 	"webcomponents": [
 		{
-			"kind": "builder",
+			"kind": "main",
 			"tag": "com-demo-chart",
 			"url": "https://marylinem.github.io/columnChart/chart/chart.js",
 			"integrity": "",
@@ -18,11 +18,7 @@
 		}	
 	],
 	"properties": {
-		"opacity": {
-			"type": "number",
-			"description": "Opacity",
-			"default": 1
-		}
+
 	},
 	"methods": {
 		
