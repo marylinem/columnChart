@@ -64,6 +64,12 @@
 	
 	}
 
+	function bindData(){
+		this.myDataBinding.data.array.forEach(row => {
+			console.log(row);
+		});
+	}
+
 	function chart(shadowRoot){
 		console.log("code funktioniert");
 		am5.ready(function() {
