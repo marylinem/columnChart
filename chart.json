@@ -18,7 +18,7 @@
 		},
 		{
 			"kind": "builder",
-			"tag": "com-sap-sample-coloredbox-builder",
+			"tag": "com-demo-chartBuilderPanel",
 			"url": "https://marylinem.github.io/columnChart/chart/chart_builder.js",
 			"integrity": "",
 			"ignoreIntegrity": true

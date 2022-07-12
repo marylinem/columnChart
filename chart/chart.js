@@ -68,13 +68,6 @@
 
 	function chart(shadowRoot){
 		console.log("code funktioniert");
-		this.myDataBinding.data.forEach(row => {
-			// Parse row
-			console.log(row);
-		})
-		const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-		await dataBinding.addDimensionToFeed("dimensions", dimensionId)
-
 		am5.ready(function() {
 
 		// Create root element
