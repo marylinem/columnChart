@@ -1,19 +1,7 @@
 (function() { 
 	let template = document.createElement("template");
 	template.innerHTML = `
-		<style>	
-		<form id="form">
-			<fieldset>
-			<table>
-				<tr>
-				<td>Color</td>
-				<td><input id="styling_color" type="text" size="40"
-				maxlength="40"></td>
-				</tr>
-			</table>
-			<input type="submit" style="display:none;">
-			</fieldset>
-		</form>	
+		<style>		
 		:host #chartdiv {
 			width: 100%;
 			height: 500px;
