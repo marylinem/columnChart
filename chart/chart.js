@@ -140,7 +140,8 @@
 
 
 		// Set data
-		var data = [{
+		var data = this.myDataBinding.feeds
+		/* [{
 		country: "USA",
 		value: 2025
 		}, {
@@ -176,7 +177,7 @@
 		}, {
 		country: "Canada",
 		value: 441
-		}];
+		}]; */
 
 		xAxis.data.setAll(data);
 		series.data.setAll(data);
