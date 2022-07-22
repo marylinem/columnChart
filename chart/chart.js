@@ -71,6 +71,7 @@
 	function chart(shadowRoot){
 		console.log("code funktioniert");
 		console.log(this.myDataBinding.data)
+		console.log("hello world");
 		am5.ready(function() {
 
 		// Create root element
