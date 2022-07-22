@@ -46,6 +46,7 @@
 		
 			}
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
+			console.log(this.myDataBinding)
 			console.log("Data Binding funktioniert")
 			chart(shadowRoot);
 
@@ -142,7 +143,43 @@
 
 
 		// Set data
-		var data = this.myDataBinding.data
+		var data = [{
+		country: "USA",
+		value: 2025
+		}, {
+		country: "China",
+		value: 1882
+		}, {
+		country: "Japan",
+		value: 1809
+		}, {
+		country: "Germany",
+		value: 1322
+		}, {
+		country: "UK",
+		value: 1122
+		}, {
+		country: "France",
+		value: 1114
+		}, {
+		country: "India",
+		value: 984
+		}, {
+		country: "Spain",
+		value: 711
+		}, {
+		country: "Netherlands",
+		value: 665
+		}, {
+		country: "Russia",
+		value: 580
+		}, {
+		country: "South Korea",
+		value: 443
+		}, {
+		country: "Canada",
+		value: 441
+		}];
 
 		xAxis.data.setAll(data);
 		series.data.setAll(data);
