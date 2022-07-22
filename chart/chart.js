@@ -46,6 +46,7 @@
 		
 			}
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
+			console.log(this.myDataBinding.data)
 			chart(shadowRoot);
 
 		}
@@ -140,8 +141,7 @@
 
 
 		// Set data
-		var data = this.myDataBinding
-		/* [{
+		var data = [{
 		country: "USA",
 		value: 2025
 		}, {
@@ -177,7 +177,7 @@
 		}, {
 		country: "Canada",
 		value: 441
-		}]; */
+		}];
 
 		xAxis.data.setAll(data);
 		series.data.setAll(data);
