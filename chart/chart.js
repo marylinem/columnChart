@@ -45,9 +45,9 @@
 				//script.onload = function(){ customElements.define("com-demo-chart", Chart);}; 
 		
 			}
-			const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-			await dataBinding.addDimensionToFeed("dimensions", dimensionId)	
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
+			console.log(this.myDataBinding)
+			console.log("Data Binding funktioniert")
 			chart(shadowRoot);
 
 		}
