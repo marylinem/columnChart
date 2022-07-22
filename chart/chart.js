@@ -72,7 +72,6 @@
 
 	function chart(shadowRoot){
 		console.log("code funktioniert");
-		console.log("hello world");
 		am5.ready(function() {
 
 		// Create root element
@@ -143,6 +142,7 @@
 
 
 		// Set data
+		console.log(this.myDataBinding)
 		var data = this.myDataBinding.data.map((e)=>({country:e.dimensions_0.label,value:e.measures_0.raw}))
 
 		xAxis.data.setAll(data);
