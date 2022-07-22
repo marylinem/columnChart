@@ -29,7 +29,6 @@
 		}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
-			console.log(changedProperties)
 			this._props = { ...this._props, ...changedProperties };
 		}
 
@@ -49,7 +48,7 @@
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
 			console.log(this.myDataBinding)
 			console.log("Data Binding funktioniert")
-			chart(shadowRoot);
+			chart(shadowRoot,this.myDataBinding);
 
 		}
 	}	
@@ -71,7 +70,7 @@
 	}
 
 
-	function chart(shadowRoot){
+	function chart(shadowRoot,myDataBinding){
 		console.log("code funktioniert");
 		am5.ready(function() {
 
@@ -143,8 +142,7 @@
 
 
 		// Set data
-		console.log(this.myDataBinding)
-		var data = this.myDataBinding.data.map((e)=>({country:e.dimensions_0.label,value:e.measures_0.raw}))
+		var data = myDataBinding.data.map((e)=>({country:e.dimensions_0.label,value:e.measures_0.raw}))
 
 		xAxis.data.setAll(data);
 		series.data.setAll(data);
