@@ -46,7 +46,6 @@
 		
 			}
 			console.log(document,shadowRoot.querySelector("#chartdiv"))
-			console.log(this.myDataBinding.data)
 			chart(shadowRoot);
 
 		}
@@ -71,6 +70,7 @@
 
 	function chart(shadowRoot){
 		console.log("code funktioniert");
+		console.log(this.myDataBinding.data)
 		am5.ready(function() {
 
 		// Create root element
