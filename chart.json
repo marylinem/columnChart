@@ -18,13 +18,42 @@
 		}	
 	],
 	"properties": {
-
+		"color": {
+			"type": "string",
+			"description": "Background color",
+			"default": "red"
+		},
+		"opacity": {
+			"type": "number",
+			"description": "Opacity",
+			"default": 1
+		},
+		"width": {
+			"type": "integer",
+			"default": 100
+		},
+		"height": {
+			"type": "integer",
+			"default": 100
+		}
 	},
 	"methods": {
-		
-	},
-	"events": {
-		
+		"setColor": {
+			"description": "Sets the background color.",
+			"parameters": [
+				{
+					"name": "newColor",
+					"type": "string",
+					"description": "The new background color"
+				}
+			],
+			"body": "this.color = newColor;"
+		},
+		"getColor": {
+			"returnType": "string",
+			"description": "Returns the background color.",
+			"body": "return this.color;"
+		}
 	},
 	"dataBindings": {
 		"myDataBinding": {
@@ -39,26 +68,12 @@
 					"description": "Measures",
 					"type": "mainStructureMember"
 				}
-			],			
-			"data": [
-			{
-				"dimensions_0": { "id": "[Product_3e315003an].[Product_Catego_3o3x5e06y2].&[PC4]", "label": "Alcohol" },
-				"dimensions_1": { "id": "[Location_4nm2e04531].[State_47acc246_4m5x6u3k6s].&[SA1]", "label": "California" },
-				"measures_0": { "raw": 30720120.73, "formatted": "30.72 Million", "unit": "USD" }
-			}
-			],
-			"metadata": {
-				"feeds": {
-					"measures": { "values": [ "measures_0" ], "type":"mainStructureMember" },
-					"dimensions": { "values": [ "dimensions_0", "dimensions_1" ],"type": "dimension" }
-				},
-				"dimensions": {
-					"dimensions_0": { "id": "Product_3e315003an", "description":"Product" },
-					"dimensions_1": { "id": "Location_4nm2e04531", "description":"Location" }
-				},
-				"mainStructureMembers": {"measures_0": { "id": "[Account_BestRunJ_sold].[parentId].&[Discount]", "label": "Discount" }}
-			}
-		
+			]
+		}	
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Colored Box."
 		}
 	}
 }

@@ -19,7 +19,11 @@
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));			
+			shadowRoot.appendChild(template.content.cloneNode(true));
+			this.addEventListener("click", event => {
+				var event = new Event("onClick");
+				this.dispatchEvent(event);
+			});			
 			this._props = {};
 			this.init(shadowRoot)
 		}
@@ -45,9 +49,7 @@
 			chart(shadowRoot);
 
 		}
-	}
-	customElements.define("com-demo-chart", Chart);
-	
+	}	
 
 
 	function load(fileName){
@@ -186,5 +188,8 @@
 
 		}); // end am5.ready()
 	}
+
+	customElements.define("com-demo-chart", Chart);
+
 	
 })();
