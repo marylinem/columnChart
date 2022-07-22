@@ -70,7 +70,8 @@
 
 	function chart(shadowRoot){
 		console.log("code funktioniert");
-		console.log(this.myDataBinding.data)
+		const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
+		await dataBinding.addDimensionToFeed("dimensions", dimensionId)	
 		console.log("hello world");
 		am5.ready(function() {
 
