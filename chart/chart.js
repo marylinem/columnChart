@@ -140,7 +140,7 @@
 
 
 		// Set data
-		var data = this.myDataBinding.feeds
+		var data = this.myDataBinding
 		/* [{
 		country: "USA",
 		value: 2025
