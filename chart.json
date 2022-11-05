@@ -15,7 +15,21 @@
 			"url": "https://marylinem.github.io/columnChart/chart/chart.js",
 			"integrity": "",
 			"ignoreIntegrity": true
-		}	
+		},
+        {
+            "kind": "styling",
+            "tag": "com-demo-chart-styling",
+            "url": "https://marylinem.github.io/columnChart/chart/chart_styling.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "builder",
+            "tag": "com-demo-chart-builder",
+            "url": "https://marylinem.github.io/columnChart/chart/chart_builder.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
 	],
 	"properties": {
 		"color": {
