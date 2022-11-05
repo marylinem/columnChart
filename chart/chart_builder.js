@@ -1,7 +1,7 @@
 (function () {
 	let template = document.createElement("template");
 	template.innerHTML = `
-
+ 		<div class="sapUiBody" id="builderContent">
 		<button id="selModel" type="button">Select Model</button>
 		<br>
 		<br>
@@ -50,10 +50,10 @@
 		</script>
 		<style>
 		:host {
-			display: block;
-			padding: 1em 1em 1em 1em;
+		display: block;
+		padding: 1em 1em 1em 1em;
 		}
-		</style>
+    	</style>
 	`;
 
 	class ChartBuilderPanel extends HTMLElement {
@@ -62,12 +62,7 @@
 			this._shadowRoot = this.attachShadow({ mode: "open" });
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
 			this._shadowRoot.getElementById("selModel").onclick = (ev) => {
-                if (this.dataBindings) {
-                    const db = this.dataBindings.getDataBinding('flowChartData');
-                    if (db) {
-                        db.openSelectModelDialog();
-                    }
-                }
+                alert("modell selected")
                 this._submit(ev);
             };
             this._shadowRoot.getElementById("createModel").onclick = (ev) => {
