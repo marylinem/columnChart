@@ -1,18 +1,7 @@
 (function () {
 	let template = document.createElement("template");
 	template.innerHTML = `
-		<form id="form">
-			<fieldset>
-				<legend>Chart Properties</legend>
-				<table>
-					<tr>
-						<td>Opacity</td>
-						<td><input id="builder_opacity" type="text" size="5" maxlength="5"></td>
-					</tr>
-				</table>
-				<input type="submit" style="display:none;">
-			</fieldset>
-		</form>
+
 		<button id="selModel" type="button">Select Model</button>
 		<br>
 		<br>
@@ -44,7 +33,7 @@
 		<br>
 		<br>
 		</div>
-		
+
 		<div class="sapUiBody" id="content"></div>
 
 		<script
@@ -72,7 +61,18 @@
 			super();
 			this._shadowRoot = this.attachShadow({ mode: "open" });
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
+			this._shadowRoot.getElementById("selModel").onclick = (ev) => {
+                if (this.dataBindings) {
+                    const db = this.dataBindings.getDataBinding('flowChartData');
+                    if (db) {
+                        db.openSelectModelDialog();
+                    }
+                }
+                this._submit(ev);
+            };
+            this._shadowRoot.getElementById("createModel").onclick = (ev) => {
+                this._submit(ev);
+            };
 		}
 
 		_submit(e) {
@@ -80,19 +80,11 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 				detail: {
 					properties: {
-						opacity: this.opacity
 					}
 				}
 			}));
 		}
 
-		set opacity(newOpacity) {
-			this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
-		}
-
-		get opacity() {
-			return this._shadowRoot.getElementById("builder_opacity").value;
-		}
 	}
 	sap.ui.define([
 		"sap/ui/core/mvc/XMLView"
